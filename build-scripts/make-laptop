@@ -1,0 +1,8 @@
+#!/bin/bash
+cmd=":" # noop to make concatenation simpler
+for dir in "$@"
+do
+  cmd="$cmd && (cd $dir && nice -n 10 make -j4 arangod arangosh arangodump arangorestore arangoimport arangoexport && nice -n 10 make -j2)"
+done
+time (eval $cmd)
+echo -e "\a"

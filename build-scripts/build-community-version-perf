@@ -1,0 +1,7 @@
+#!/bin/bash
+
+VERSION=$1
+
+git checkout v$VERSION && mkdir build-$VERSION && (cd build-$VERSION && ~/work/scripts/build-community-perf . && rm -rf 3rdParty/ arangod arangosh lib tests)
+
+echo -e '\a'

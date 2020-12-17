@@ -1,0 +1,5 @@
+#!/bin/bash
+BUILD=${1:-"build-debug"}
+SOURCE=${2:-"~/src/arangodb/arangodb"}
+(cd $BUILD && CC=/usr/lib/ccache/gcc-9 CXX=/usr/lib/ccache/g++-9 CXXFLAGS="-fno-omit-frame-pointer -fuse-ld=gold" nice -n 10 cmake $SOURCE -DCMAKE_BUILD_TYPE=Debug -DUSE_ENTERPRISE=Off -DUSE_MAINTAINER_MODE=On -DUSE_FAILURE_TESTS=On -DUSE_BACKTRACE=On -DUSE_STRICT_OPENSSL_VERSION=Off -DCMAKE_EXE_LINKER_FLAGS="-fuse-ld=gold -Wl,--disable-new-dtags" -DCMAKE_SHARED_LINKER_FLAGS="-fuse-ld=gold -Wl,--disable-new-dtags")
+echo -e "\a"

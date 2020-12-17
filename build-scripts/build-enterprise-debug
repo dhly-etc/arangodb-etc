@@ -1,0 +1,5 @@
+#!/bin/bash
+BUILD=${1:-"build-enterprise-debug"}
+SOURCE=${2:-"~/src/arangodb/arangodb"}
+(cd $BUILD && CC=/usr/lib/ccache/clang-8 CXX=/usr/lib/ccache/clang++-8 CXXFLAGS="-fno-omit-frame-pointer" nice -n 10 cmake $SOURCE -DCMAKE_BUILD_TYPE=Debug -DUSE_ENTERPRISE=On -DUSE_MAINTAINER_MODE=On -DUSE_FAILURE_TESTS=On -DUSE_BACKTRACE=On -DUSE_STRICT_OPENSSL_VERSION=Off)
+echo -e "\a"

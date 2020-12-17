@@ -1,0 +1,4 @@
+#!/bin/bash
+iter=0
+while $@; do echo "Iteration $iter completed successfully."; iter=$((iter+1)); done
+echo "Failed during iteration $iter!"

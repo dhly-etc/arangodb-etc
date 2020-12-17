@@ -1,0 +1,1 @@
+git clang-format --binary clang-format-6.0 --style='file' --extensions h,cpp

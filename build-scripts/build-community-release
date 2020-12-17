@@ -1,0 +1,5 @@
+#!/bin/bash
+BUILD=${1:-"build-release"}
+SOURCE=${2:-"~/src/arangodb/arangodb"}
+(cd $BUILD && CC=/usr/lib/ccache/gcc-9 CXX=/usr/lib/ccache/g++-9 CXXFLAGS="-fno-omit-frame-pointer" nice -n 10 cmake $SOURCE -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_ENTERPRISE=Off -DUSE_MAINTAINER_MODE=Off -DUSE_FAILURE_TESTS=Off -DUSE_BACKTRACE=Off -DUSE_STRICT_OPENSSL_VERSION=Off)
+echo -e "\a"
