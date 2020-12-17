@@ -1,0 +1,11 @@
+Limitations
+ - Non-transactional
+ - Random write pattern -> needs SSD storage to not fall over
+ - Cardinality could be an issue -> 1-4KB RAM per series (e.g. a few GB for a million series)
+ - No (exposed) compaction API
+ - Currently no updates/deletes
+ - Currently no official Windows support
+ 
+Planned updates
+ - Updates & deletions
+ - Windows

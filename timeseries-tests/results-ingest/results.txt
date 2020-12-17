@@ -1,0 +1,29 @@
+batch | threads |   engine   |    ops
+======|=========|============|=======
+    1 |       1 | timescale  |    469
+    1 |       1 | arango-doc |   1748
+    1 |       1 | arango-ts  |   1806
+  100 |       1 | timescale  |  11908
+  100 |       1 | arango-doc |  11510
+  100 |       1 | arango-ts  |  15751
+ 1000 |       1 | timescale  |  13383
+ 1000 |       1 | arango-doc |  16424
+ 1000 |       1 | arango-ts  |  31379
+    1 |       4 | timescale  |   1470
+    1 |       4 | arango-doc |   6979
+    1 |       4 | arango-ts  |   7591
+  100 |       4 | timescale  |  32874
+  100 |       4 | arango-doc |  36765
+  100 |       4 | arango-ts  |  53175
+ 1000 |       4 | timescale  |  46088
+ 1000 |       4 | arango-doc |  43563
+ 1000 |       4 | arango-ts  |  70282
+    1 |      16 | timescale  |   4731
+    1 |      16 | arango-doc |  14697
+    1 |      16 | arango-ts  |  12818
+  100 |      16 | timescale  |  53076
+  100 |      16 | arango-doc |  70077
+  100 |      16 | arango-ts  |  64639
+ 1000 |      16 | timescale  |  79563
+ 1000 |      16 | arango-doc | 140831
+ 1000 |      16 | arango-ts  |  65711
